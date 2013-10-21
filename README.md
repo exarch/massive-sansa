@@ -1,4 +1,26 @@
 massive-sansa
 =============
 
-open-source application delivery framework
+Configuration Portal
+
+Pre-reqs:
+apt-get install postgresql python-psycopg2
+apt-get install pgadmin3
+apt-get install postgresql-server-dev-9.1
+psql template1
+\password
+CREATE DATABASE jade;
+
+==============
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'jade',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': 'postgres',
+        'PASSWORD': '********',
+        'HOST': '127.0.0.1',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
+    }
+}
+
